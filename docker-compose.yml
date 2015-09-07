@@ -9,11 +9,11 @@ web:
     environment:
       - ALLOW_OVERRIDE=true
     links:
-      - db:db
-      - maildev:maildev
+      - db:"db"
+      - maildev:"maildev"
 
 db:
-    image: mariadb
+    image: mysql
     volumes:
       - /var/lib/boot2docker/mysql:/var/lib/mysql
     environment:
